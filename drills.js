@@ -14,6 +14,7 @@ main = () => {
   // SSL.remove("squirrel");
   SSL.insertBefore('Helo','Y');
   SSL.insertAfter('Starbuck', 'AfterThing');
+  SSL.insertAt(3, 'Cat');
   console.log(JSON.stringify(SSL));
 };
 

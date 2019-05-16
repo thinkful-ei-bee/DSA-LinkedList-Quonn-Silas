@@ -150,6 +150,29 @@ class LinkedList {
     }
   }
 
+  insertAt(position, item) {
+    let currNode = this.head;
+    let previousNode = this.head;
+    let index = 0;
+
+    while (currNode !== null && index !== position) {
+      previousNode = currNode;
+      currNode = currNode.next;
+      index++;
+    }
+
+    if (index === position) {
+      let newNode = new _Node(item, currNode);
+      previousNode.next = newNode;
+    }
+
+    if (currNode === null) {
+      console.log('Called insertAt(), but item not found');
+      return;
+    }
+
+  }
+
 
 
 }
